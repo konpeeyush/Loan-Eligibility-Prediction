@@ -1,22 +1,52 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
+    <title>Loan Eligibility Prediction</title>
+
+    <!-- Meta tags -->
     <meta charset="UTF-8">
-    <title>Loan Eligibility Prediction App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/index.css')}}" type="text/css" media="all"/>
 </head>
 
 <body>
-    <h1>Predict your Exam Score</h1>
-    <p>
-        Enter your number of hours studied
-    </p>
-    <form action="/" method="post">
-        <input type="number" name="hrs" placeholder="Number of Hours Studied">
-        <input type="submit">
-    </form>
-    <p>Your Predicted Marks are:</p>
-    {{ my_marks }}
+<!-- login form -->
+<section class="w3l-login">
+    <div class="overlay">
+        <div class="wrapper">
+            <div class="logo">
+                <a class="brand-logo" href="index.html">Loan Eligibility Prediction</a>
+            </div>
+            <div class="form-section">
+                <h3>Login</h3>
+                <h6>To continue with us</h6>
+                <form action="#" method="post" class="signin-form">
+                    <div class="form-input">
+                        <input type="text" name="Username" placeholder="Username" required="" autofocus>
+                    </div>
+                    <div class="form-input">
+                        <input type="password" name="password" placeholder="Password" required="">
+                    </div>
+                    <button type="submit" class="btn btn-primary theme-button mt-4">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+
+</section>
+
+<!-- /login form -->
 </body>
 
 </html>

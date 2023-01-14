@@ -44,10 +44,10 @@ X = sc.fit_transform(X)
 
 # Fitting the model
 classifier = XGBClassifier()
-classifier.fit(X_train, y_train)
+classifier.fit(X, y)
+
 
 # Saving the model
 pickle.dump(classifier, open('classifier.pkl', 'wb'))
 pickle.dump(labelEncoder_X, open('labelEncoder_X.pkl', 'wb'))
 pickle.dump(sc, open('sc.pkl', 'wb'))
-

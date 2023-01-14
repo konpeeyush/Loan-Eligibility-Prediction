@@ -1,7 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -22,20 +18,98 @@ Author URL: http://w3layouts.com
 <section class="w3l-login">
     <div class="overlay">
         <div class="wrapper">
-            <div class="logo">
-                <a class="brand-logo" href="index.html">Loan Eligibility Prediction</a>
-            </div>
             <div class="form-section">
                 <h3>Login</h3>
-                <h6>To continue with us</h6>
-                <form action="#" method="post" class="signin-form">
-                    <div class="form-input">
-                        <input type="text" name="Username" placeholder="Username" required="" autofocus>
+                <h6>To continue with Us</h6>
+                <form action="{{url_for('predict')}}" method="POST">
+                    <!--                            Credit History-->
+                    <div class="field">
+                        <legend>Have you credited before?</legend>
+                        <input type="radio" name="creditHistory" id="yes-credit" value="yes" checked>
+                        <label for="yes-credit">Yes</label>
+                        <input type="radio" name="creditHistory" id="no-credit" value="no">
+                        <label for="no-credit">No</label>
                     </div>
-                    <div class="form-input">
-                        <input type="password" name="password" placeholder="Password" required="">
+                    <!--                            Employment History-->
+                    <div class="field">
+                        <legend>Are You Self Employed?</legend>
+                        <input type="radio" name="selfEmployed" id="yes-employed" value="yes" checked>
+                        <label for="yes-employed">Yes</label>
+                        <input type="radio" name="selfEmployed" id="no-employed" value="no">
+                        <label for="no-employed">No</label>
                     </div>
-                    <button type="submit" class="btn btn-primary theme-button mt-4">Log in</button>
+                    <!--                            Education History-->
+                    <div class="field">
+                        <legend>Are you graduated?</legend>
+                        <input type="radio" name="education" id="yes-graduated" value="yes" checked>
+                        <label for="yes-graduated">Yes</label>
+                        <input type="radio" name="education" id="no-graduated" value="no">
+                        <label for="no-graduated">No</label>
+                    </div>
+
+
+                    <!--                            Are your Married?-->
+                    <div class="field">
+                        <legend>Are You Married?</legend>
+                        <input type="radio" name="married" id="yes-married" value="yes" checked>
+                        <label for="yes-married">Yes</label>
+                        <input type="radio" name="married" id="no-married" value="no">
+                        <label for="no-married">No</label>
+                    </div>
+                    <!--                            Co-Applicant Income-->
+                    <div class="field">
+                        <div class="label">Enter Co-Applicant Income</div>
+                        <label>
+                            <input type="number" name="coApplicantIncome" id="co-applicant-income" placeholder="Enter Co-Applicant Income">
+                        </label>
+                    </div>
+                    <!--                            Property Area-->
+                    <div class="field">
+                        <legend>What's your Property Area?</legend>
+                        <input type="radio" name="propertyArea" id="rural" value="rural" checked>
+                        <label for="rural">Rural</label>
+                        <input type="radio" name="propertyArea" id="semiUrban" value="semiUrban">
+                        <label for="semiUrban">Semi-Urban</label>
+                        <input type="radio" name="propertyArea" id="urban" value="urban">
+                        <label for="urban">Urban</label>
+                    </div>
+                    <!--                            Dependencies-->
+                    <div class="field">
+                        <legend>Number of dependents</legend>
+                        <label>
+                            <input type="number" name="dependents" placeholder="Enter number of dependents">
+                        </label>
+                    </div>
+
+                    <!--                            Loan Amount Term-->
+                    <div class="field">
+                        <legend>Enter Loan Amount Term</legend>
+                        <label>
+                            <input type="number" name="loanAmountTerm" placeholder="Enter Loan Amount Term">
+                        </label>
+                    </div>
+                    <!--                            Loan Amount-->
+                    <div class="field">
+                        <legend>Enter Loan Amount</legend>
+                        <label>
+                            <input type="number" name="loanAmount" placeholder="Enter Loan Amount">
+                        </label>
+                    </div>
+                    <!--                            Gender-->
+                    <div class="field">
+                        <legend>Select Your Gender</legend>
+                        <input type="radio" name="gender" id="male" value="male" checked>
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label></div>
+                    <!--                            Applicant Income-->
+                    <div class="field">
+                        <legend>Enter Applicant Income</legend>
+                        <label>
+                            <input type="number" name="applicantIncome" placeholder="Enter Applicant Income">
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary theme-button mt-4" value="predict">Submit</button>
                 </form>
             </div>
         </div>

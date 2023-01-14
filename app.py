@@ -33,10 +33,11 @@ def predict():
         [gender, married, dependents, education, selfEmployed, applicantIncome, coApplicantIncome, loanAmount,
          loanAmountTerm, creditHistory, propertyArea])
 
+    dataSet = dataSet.reshape(1, -1)
     labelencoder_X = LabelEncoder()
     for i in range(0, 5):
-        dataSet[i] = labelencoder_X.fit_transform(dataSet[i])
-    dataSet[10] = labelencoder_X.fit_transform(dataSet[10])
+        dataSet[:, i] = labelencoder_X.fit_transform(dataSet[:, i])
+    dataSet[:, 10] = labelencoder_X.fit_transform(dataSet[:, 10])
 
     dataSet = sc.fit_transform(dataSet)
 

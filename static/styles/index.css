@@ -90,6 +90,8 @@ ol {
     height: 100vh;
     background: url(/static/bgimage.jpg) no-repeat 0px 0px;
     background-size: cover;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 .logo {
@@ -108,9 +110,14 @@ ol {
     max-width: 400px;
     margin: 20px auto;
     padding: 2rem 3rem;
-    border-radius: 4px;
-    box-shadow: 0px 9px 24px 5px rgba(0, 0, 0, 0.04);
-    background: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow: scroll;
 }
 
 .w3l-login .form-section h3 {
@@ -127,6 +134,55 @@ ol {
     color: #5a5a5a;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.w3l-login .form-section .field {
+    /*border: 2px solid red;*/
+    padding: 1rem 1rem;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.w3l-login .form-section .field legend {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+}
+
+.w3l-login .form-section .field input {
+    width: 90%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #5a5a5a;
+    outline: none;
+    transition: all 10ms ease;
+    display: block;
+    margin-bottom: 10px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
+
+.w3l-login .form-section .field input[type="radio"] {
+    display: inline;
+    width: auto;
+    padding: 0 1rem ;
+}
+
+.w3l-login .form-section .field input:focus {
+    background: #fff;
+    color: #090909;
+    border: 2px solid #00d679;
+    border-radius: 10px;
 }
 
 .w3l-login button.btn {

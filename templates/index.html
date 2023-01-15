@@ -25,25 +25,25 @@
                     <!--                            Credit History-->
                     <div class="field">
                         <legend>Have you credited before?</legend>
-                        <input type="radio" name="creditHistory" id="yes-credit" value="yes" checked>
+                        <input type="radio" name="creditHistory" id="yes-credit" value="1" checked>
                         <label for="yes-credit">Yes</label>
-                        <input type="radio" name="creditHistory" id="no-credit" value="no">
+                        <input type="radio" name="creditHistory" id="no-credit" value="0">
                         <label for="no-credit">No</label>
                     </div>
                     <!--                            Employment History-->
                     <div class="field">
                         <legend>Are You Self Employed?</legend>
-                        <input type="radio" name="selfEmployed" id="yes-employed" value="yes" checked>
+                        <input type="radio" name="selfEmployed" id="yes-employed" value="1" checked>
                         <label for="yes-employed">Yes</label>
-                        <input type="radio" name="selfEmployed" id="no-employed" value="no">
+                        <input type="radio" name="selfEmployed" id="no-employed" value="0">
                         <label for="no-employed">No</label>
                     </div>
                     <!--                            Education History-->
                     <div class="field">
                         <legend>Are you graduated?</legend>
-                        <input type="radio" name="education" id="yes-graduated" value="yes" checked>
+                        <input type="radio" name="education" id="yes-graduated" value="1" checked>
                         <label for="yes-graduated">Yes</label>
-                        <input type="radio" name="education" id="no-graduated" value="no">
+                        <input type="radio" name="education" id="no-graduated" value="0">
                         <label for="no-graduated">No</label>
                     </div>
 
@@ -51,16 +51,16 @@
                     <!--                            Are your Married?-->
                     <div class="field">
                         <legend>Are You Married?</legend>
-                        <input type="radio" name="married" id="yes-married" value="yes" checked>
+                        <input type="radio" name="married" id="yes-married" value="1" checked>
                         <label for="yes-married">Yes</label>
-                        <input type="radio" name="married" id="no-married" value="no">
+                        <input type="radio" name="married" id="no-married" value="0">
                         <label for="no-married">No</label>
                     </div>
                     <!--                            Co-Applicant Income-->
                     <div class="field">
                         <div class="label">Enter Co-Applicant Income</div>
                         <label>
-                            <input type="number" name="coApplicantIncome" id="co-applicant-income" placeholder="Enter Co-Applicant Income">
+                            <input type="number" name="coApplicantIncome" id="co-applicant-income" placeholder="Enter Co-Applicant Income" required>
                         </label>
                     </div>
                     <!--                            Property Area-->
@@ -77,7 +77,7 @@
                     <div class="field">
                         <legend>Number of dependents</legend>
                         <label>
-                            <input type="number" name="dependents" placeholder="Enter number of dependents">
+                            <input type="number" name="dependents" placeholder="Enter number of dependents" required>
                         </label>
                     </div>
 
@@ -85,28 +85,28 @@
                     <div class="field">
                         <legend>Enter Loan Amount Term</legend>
                         <label>
-                            <input type="number" name="loanAmountTerm" placeholder="Enter Loan Amount Term">
+                            <input type="number" name="loanAmountTerm" placeholder="Enter Loan Amount Term" required>
                         </label>
                     </div>
                     <!--                            Loan Amount-->
                     <div class="field">
                         <legend>Enter Loan Amount</legend>
                         <label>
-                            <input type="number" name="loanAmount" placeholder="Enter Loan Amount">
+                            <input type="number" name="loanAmount" placeholder="Enter Loan Amount" required>
                         </label>
                     </div>
                     <!--                            Gender-->
                     <div class="field">
                         <legend>Select Your Gender</legend>
-                        <input type="radio" name="gender" id="male" value="male" checked>
+                        <input type="radio" name="gender" id="male" value="1" checked>
                         <label for="male">Male</label>
-                        <input type="radio" name="gender" id="female" value="female">
+                        <input type="radio" name="gender" id="female" value="0">
                         <label for="female">Female</label></div>
                     <!--                            Applicant Income-->
                     <div class="field">
                         <legend>Enter Applicant Income</legend>
                         <label>
-                            <input type="number" name="applicantIncome" placeholder="Enter Applicant Income">
+                            <input type="number" name="applicantIncome" placeholder="Enter Applicant Income" required>
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary theme-button mt-4" value="predict">Submit</button>
